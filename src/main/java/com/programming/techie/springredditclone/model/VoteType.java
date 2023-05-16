@@ -5,12 +5,12 @@ import com.programming.techie.springredditclone.exceptions.SpringRedditException
 import java.util.Arrays;
 
 public enum VoteType {
-    UPVOTE(1), DOWNVOTE(-1),
-    ;
+    UPVOTE(1), DOWNVOTE(-1);
 
-    private int direction;
+    private final Integer direction;
 
-    VoteType(int direction) {
+    VoteType(Integer direction) {
+        this.direction = direction;
     }
 
     public static VoteType lookup(Integer direction) {
